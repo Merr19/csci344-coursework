@@ -1,0 +1,26 @@
+/* Make sure that your @import statement is at the top of your CSS file  */
+
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+/* font-family: "Sedgwick Ave Display", cursive;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Sedgwick+Ave+Display&display=swap');
+/* font-family: "Beth Ellen", cursive; 
+( I ended up not using this one b/c I didn't like it as much. */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+h1, h2{
+    font-family: "Sedgwick Ave Display", cursive;
+}
+

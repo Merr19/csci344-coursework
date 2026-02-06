@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: pink;
+}
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(5, 1fr);
+    /* you will add addition rules for the container here  */
+}
+
+/* create your child rules here:  */
+
+.item-1, .item-3, .item-5{
+    border: solid 1px;
+    grid-template-columns: 75% 25% 0%;
+    background-color: rgb(255, 218, 223);
+}
+
+.item-2, .item-4{
+    border: solid 1px;
+    grid-template-columns: auto auto auto;
+
+}
