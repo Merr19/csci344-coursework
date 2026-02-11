@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+/*font-family: "Comfortaa", sans-serif;*/
+
+/*for testing*/
+body{
+    background-color: green;
+}
+
+/*Nav bar*/
+nav{
+    position: fixed;
+    display: flex;
+    height: 13%;
+    width: 99%;
+    margin-right: auto;
+    flex-direction: row;
+    background-color: white;
+}
+
+ul{
+    display: flex;
+    padding: 16px 6px;
+    margin-left: auto;
+}
+
+h1{
+    font-family: "Comfortaa", sans-serif;
+    margin-left: 30px;
+    padding: 4px 8px;
+}
+
+li{
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    margin-right: 20px;
+
+}
+
+#sign-out{
+    color: royalblue;
+}
+
+/*Nav bar mobile*/
+@media screen and (max-width: 800px) {
+    main{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav{
+        margin-right: 10px;
+        width: 97%;
+        height: 15%;
+    }
+
+    h1 {
+        margin-left: 10px;
+    }
+    
+    div{
+        display: none;
+    }
+}
+
+/*recommendations*/
+
+div{
+    height: 10%;
+}
+

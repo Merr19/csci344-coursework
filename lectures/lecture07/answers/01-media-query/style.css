@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+header,
+main,
+footer {
+    border: solid 2px coral;
+    padding: 10px;
+}
+
+header {
+    height: 20vh;
+}
+
+main {
+    min-height: 70vh;
+}
+
+footer {
+    height: 10vh;
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        background-color: #555;
+        color: white;
+    }
+
+    main {
+        background-color: #EEE;
+    }
+
+    footer {
+        background-color: coral;
+        color: white;
+    }
+}

@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: lightskyblue;
+    padding: 40px;
+}
+
+main{
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    padding: 40px;
+}
+
+section p {
+    background-color: white;
+    padding: 30px;   
+}
+/* Your code here */

@@ -1,0 +1,53 @@
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #F4F4F4;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    line-height: 1.7em;
+}
+
+/* Begin Debugging Code */
+/* aside,
+header,
+main,
+main section,
+nav,
+.logo {
+    border: solid 2px #CCC;
+    padding: 10px;
+}
+
+aside,
+body>header,
+main {
+    border: solid 4px #000;
+    padding: 10px;
+} */
+
+/* End Debugging Code */
+
+header {
+    /* make it sticky*/
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: lightskyblue;
+
+    /* position the children of the header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+main {
+    padding: 0 15vw;
+}

@@ -1,0 +1,39 @@
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #F4F4F4;
+}
+
+/* Begin Debugging Code */
+header,
+main,
+main section,
+nav,
+.logo {
+    border: solid 2px #CCC;
+    padding: 10px;
+    margin: 10px;
+}
+
+.logo {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+aside,
+body>header,
+main,
+.news-feed {
+    border: solid 4px #000;
+    padding: 10px;
+    margin: 10px;
+    font-family: monospace;
+}
+
+/* End Debugging Code */
+
+
+@media (max-width: 800px) {}

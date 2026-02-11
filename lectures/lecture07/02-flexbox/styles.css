@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    height: 100vh;
+    /* put the parent into flex mode */
+    display: flex;
+
+    /* center on secondary axis */
+    align-items: center;
+
+    /* center on main axis */
+    justify-content: center; 
+
+    gap: 10px;
+}
+
+section {
+    border: solid 4px orangered;
+    width: 200px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px){
+    main{
+        flex-direction: column;
+    }
+}
