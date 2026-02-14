@@ -1,20 +1,32 @@
+
+/*FONTS*/
+
+/*nav bar*/
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 /*font-family: "Comfortaa", sans-serif;*/
 
+/*suggestions*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/*font-family: "Inter", sans-serif;*/
+
+/*------------------------------------------*/
+
 /*for testing*/
-body{
+/*body{
     background-color: green;
-}
+}*/
+
 
 /*Nav bar*/
-nav{
+nav.top{
     position: fixed;
     display: flex;
-    height: 13%;
+    height: 100px;
     width: 99%;
     margin-right: auto;
     flex-direction: row;
     background-color: white;
+    top: 0%;
 }
 
 ul{
@@ -38,33 +50,357 @@ li{
 
 #sign-out{
     color: royalblue;
+    font-size: 17px;
+    background: none;
+    border: none;
+    margin-top: -13px;
 }
 
-/*Nav bar mobile*/
-@media screen and (max-width: 800px) {
+
+
+/*recommendations*/
+
+section.rec{
+    padding: 20px;
+    background-color: lightgray;
+    height: 100vh;
+    width: 350px;
+    position: fixed;
+    flex-direction: column;
+    display: flex;
+    right: 0;
+    top: 99px;
+}
+
+div.toprec{
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+    img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+}
+
+p{
+    font-family: "Inter", sans-serif;
+    color: rgb(85, 85, 85);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    font-size: 17px;
+}
+
+.users {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    font-family: "Inter", sans-serif;
+    flex-direction: column;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 80px auto 80px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    flex-direction: column;
+    height: 70px;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 17px;
+    justify-content: center;
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    margin-bottom: -2px;
+    position: relative;
+    top: -25px;
+}
+
+.suggested {
+    font-weight: normal;
+    color: rgb(85, 85, 85);
+    font-size: 14px;
+    justify-content: center;
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    align-self: start;
+    position: relative;
+    top: -25px;
+}
+
+.followbtn {
+    color: royalblue;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 17px;
+    margin-left: 30px;
+    grid-column: 3;
+    justify-self: end;
+}
+
+.pfps{
+    flex-direction: row;
+    align-items: left;
+    width: 50px;
+    height: 50px;
+    grid-column: 1;
+    margin-left: 18px;
+    border-radius: 50%;
+}
+
+/*stories-----------------------------------------*/
+
+section.story{
+    display: flex;
+    margin-top: 109px;
+    margin-left: 249px;
+    width: calc(100% - 350px);
+    height: 18vh;
+    flex-direction: column; 
+}
+
+.stories{
+    display: flex;
+    gap: 3px;
+    overflow-x: auto;
+    margin-left: 80px ;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color:  rgb(85, 85, 85);
+    padding: 10px;
+    width: 840px;
+    background-color: white;
+}
+
+.story-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stories-pfp{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.stories-user{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: rgb(85, 85, 85);
+}
+
+/*card post----------------------------------------*/
+
+section.cards{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;  
+    align-items: center;
+    margin-right: 350px;
+}
+
+.post-item{
+    border: solid 1.5px;
+    border-color: rgb(85, 85, 85);
+    width: 880px;
+    max-width: 95%;
+    margin-bottom: 50px;
+    background-color: white;
+}
+
+div.top-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+}
+
+h2.userN-post{
+    font-family: "Comfortaa", sans-serif;
+    margin: 0;
+    margin-left: 30px;
+    max-width: 150px;
+}
+
+button.dots{
+    font-weight: bold;
+    font-size: 30px;
+    border: none;
+    background: none;
+    font-family: "Comfortaa", sans-serif;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.img-post{
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.comsec{
+    border-top: 1px solid rgb(85, 85, 85);
+    flex-direction: row;
+}
+
+.mid-bar{
+    display: flex;
+    align-items: center;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.iconbtn{
+    border: none;
+    background: none;
+    font-size: 22px;
+    margin-top: 10px;    
+}
+
+.mid-bar button:last-child{
+    margin-left: auto;
+    border: none;
+    background: none;
+    font-size: 22px;
+}
+
+.likes{
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    color: black;
+}
+
+.words{
+    margin-top: 0px;
+}
+
+.username-p{
+    display: flex;
+    flex-direction: row;
+    margin-left: 9px;
+    align-items: center;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+.coms{
+    font-family: "Inter", sans-serif;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    display: flex;
+    flex-direction: row;
+    margin-left: 3px;
+}
+
+.more{
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: royalblue;
+}
+
+.days{
+    font-family: "Inter", sans-serif;
+    color: rgb(85, 85, 85);
+    font-size: 14px;
+    margin-left: 9px;
+}
+
+.bot-bar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.emoji, .makecom, .submitP{
+    border: none;
+    background: none;
+}
+
+.emoji{
+    font-size: 23px;
+    margin-right: 7px;
+}
+
+.makecom{
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: rgb(85, 85, 85);
+}
+
+.submitP{
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: royalblue;
+    margin-left: auto;
+}
+
+/*mobile*/
+@media screen and (max-width: 1100px) {
+    /*nav bar*/
     main{
         flex-direction: column;
-        justify-content: center;
+        align-items: stretch;
     }
 
-    nav{
+    nav.top{
         margin-right: 10px;
         width: 97%;
         height: 15%;
     }
 
     h1 {
-        margin-left: 10px;
+        margin-left: 0;
+        text-align: center;
     }
-    
-    div{
-        display: none;
+
+    /*rec. section*/    
+    section.rec{
+        display: none !important;
+    }
+
+    section.story{
+        margin-left: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    .stories{
+        margin-left: 0;
+        width: 95%;
+    }
+
+    section.cards{
+        margin-right: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    .posts{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .img-post{
+        margin-left: 0;
     }
 }
-
-/*recommendations*/
-
-div{
-    height: 10%;
-}
-

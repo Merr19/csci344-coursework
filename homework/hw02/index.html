@@ -4,35 +4,268 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <i class="fa-solid fa-face-smile"></i>
+
     <!--Nav. bar step 1-->
-    <nav>
+    <nav class="top">
         <h1>Photo App</h1>
         <ul>
             <li>mersapp</li>
-            <li id="sign-out">Sign Out</li>
+            <button id="sign-out">Sign Out</button>
         </ul>
     </nav>
 
     <!--Recomendation step 2-->
-    <div>
-        <h1>mersapp</h1>
-        <p>Suggestions for you</p>
-        <ul class="users">
-            <li>hMiku</li>
-            <li>smiski</li>
-            <li>snoopy1</li>
-            <li>mofusand</li>
-            <li>oshawott</li>
-        </ul>
+    <section class="rec">
+        <div class="toprec">
+            <img src="./images/pfp.jpg" alt="pfp">
+            <h1>mersapp</h1>
+        </div>
 
-        <ul id="followbtn">
-            <li>follow</li>
+        <p>Suggestions for you</p>
+
+        <ul class="users">
+            <li class="user">
+                <img class="pfps"src="./images/miku.jpg" alt="miku">
+                <span class="username">hMiku</span>
+                <span class="suggested">suggested for you</span>
+                <button class="followbtn">follow</button>
+            </li>
+            <li class="user">
+                <img class="pfps" src="./images/smiski.jpg" alt="smiski">
+                <span class="username">smiski</span>
+                <span class="suggested">suggested for you</span>
+                <button class="followbtn">follow</button>
+            </li>
+            <li class="user">
+                <img class="pfps" src="./images/snoopy.jpg" alt="snoopy">
+                <span class="username">snoopy1</span>
+                <span class="suggested">suggested for you</span>
+                <button class="followbtn">follow</button>
+            </li>
+            <li class="user">
+                <img class="pfps" src="./images/mof.jpg" alt="mofusand">
+                <span class="username">mofusand</span>
+                <span class="suggested">suggested for you</span>
+                <button class="followbtn">follow</button>
+            </li>
+            <li class="user">
+                <img class="pfps" src="./images/osh.jpg" alt="oshawott">
+                <span class="username">oshawott</span>
+                <span class="suggested">suggested for you</span>
+                <button class="followbtn">follow</button>
+            </li>
         </ul>
-    </div>
+    </section>
+
+    <!--Stories step 3-->
+    <section class="story">
+        <div class="stories">
+            <div class="story-item">
+                <img class="stories-pfp" src="./images/miku.jpg" alt="mikustory">
+                <p class="stories-user"> hMiku </p>
+            </div>
+
+            <div class="story-item">
+                <img class="stories-pfp" src="./images/smiski.jpg" alt="smiskistory">
+                <p class="stories-user"> smiski </p>
+            </div>
+
+            <div class="story-item">
+                <img class="stories-pfp" src="./images/snoopy.jpg" alt="snoopystory">
+                <p class="stories-user"> snoopy1 </p>
+            </div>
+
+            <div class="story-item">
+                <img class="stories-pfp" src="./images/mof.jpg" alt="mofusandstory">
+                <p class="stories-user"> mofusand </p>
+            </div>
+
+            <div class="story-item">
+                <img class="stories-pfp" src="./images/osh.jpg" alt="oshawottstory">
+                <p class="stories-user"> oshawott </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Cards step 4-->
+    <section class="cards">
+        <div class="posts">
+            <div class="post-item">
+                <div class="top-bar">
+                    <h2 class="userN-post"> mofusand </h2>
+                    <button class="dots"> ... </button>
+                </div>
+
+                <img class="img-post" src="./images/mofusandpost.jpg" alt="mofpost">
+
+                <div class="comsec">
+                    <div class="mid-bar">
+                        <button class="iconbtn"> <i class="fa-regular fa-heart"></i> </button>
+                        <button class="iconbtn"> <i class="fa-regular fa-comment"></i> </button>
+                        <button class="iconbtn"> <i class="fa-regular fa-paper-plane"></i> </button>
+                        <button class="iconbtn4"> <i class="fa-regular fa-bookmark"></i> </button>
+                    </div>
+
+                    <p class="likes"> 300 likes </p>
+
+                    <div class="words">
+                        <span class="username-p"> mofusand 
+                            <p class="coms"> Here is a picture of 4 mofusands together txt txt txt txt txt txt txt txt txttxt txt txt txt txt
+                            <button class="more"> more </button> </p> </span>
+
+                        <span class="username-p"> Eythan 
+                            <p class="coms"> here is a caption txt txt txt</p></span>
+
+                        <span class="username-p"> Emily 
+                            <p class="coms"> here is a caption txt txt txt</p></span>
+                    </div>
+
+                    <span class="days"> 1 day ago </span>
+
+                </div>
+
+                <div class="bot-bar">
+                    <button class="emoji"> <i class="fa-regular fa-face-smile"></i> </button>
+                    <button class="makecom"> Add a comment... </button>
+                    <button class="submitP"> Post </button>
+                </div>
+            </div> <!--end-->
+
+            <div class="post-item">
+                <div class="top-bar">
+                    <h2 class="userN-post"> mofusand </h2>
+                    <button class="dots"> ... </button>
+                </div>
+
+                <img class="img-post" src="./images/mofusandpost.jpg" alt="mofpost">
+
+                <div class="comsec">
+                    <div class="mid-bar">
+                        <button class="iconbtn"> <i class="fa-regular fa-heart"></i> </button>
+                        <button class="iconbtn"> <i class="fa-regular fa-comment"></i> </button>
+                        <button class="iconbtn"> <i class="fa-regular fa-paper-plane"></i> </button>
+                        <button class="iconbtn"> <i class="fa-regular fa-bookmark"></i> </button>
+                    </div>
+
+                    <p class="likes"> 300 likes </p>
+
+                    <div class="words">
+                        <span class="username-p"> mofusand 
+                            <p class="coms"> Here is a picture of 4 mofusands together txt txt txt txt txt txt txt txt txttxt txt txt txt txt
+                            <button class="more"> more </button> </p> </span>
+
+                        <span class="username-p"> Eythan 
+                            <p class="coms"> here is a caption txt txt txt</p></span>
+
+                        <span class="username-p"> Emily 
+                            <p class="coms"> here is a caption txt txt txt</p></span>
+                    </div>
+
+                    <span class="days"> 1 day ago </span>
+
+                </div>
+
+                <div class="bot-bar">
+                    <button class="emoji"> <i class="fa-regular fa-face-smile"></i> </button>
+                    <button class="makecom"> Add a comment... </button>
+                    <button class="submitP"> Post </button>
+                </div>
+             </div> <!--end-->
+            
+            <div class="post-item">
+                <div class="top-bar">
+                    <h2 class="userN-post"> mofusand </h2>
+                    <button class="dots"> ... </button>
+                </div>
+
+                <img class="img-post" src="./images/mofusandpost.jpg" alt="mofpost">
+
+                <div class="comsec">
+                    <div class="mid-bar">
+                        <button class="iconbtn"> <i class="fa-regular fa-heart"></i> </button>
+                        <button class="iconbtn"> <i class="fa-regular fa-comment"></i> </button>
+                        <button class="iconbtn"> <i class="fa-regular fa-paper-plane"></i> </button>
+                        <button class="iconbtn4"> <i class="fa-regular fa-bookmark"></i> </button>
+                    </div>
+
+                    <p class="likes"> 300 likes </p>
+
+                    <div class="words">
+                        <span class="username-p"> mofusand 
+                            <p class="coms"> Here is a picture of 4 mofusands together txt txt txt txt txt txt txt txt txttxt txt txt txt txt
+                            <button class="more"> more </button> </p> </span>
+
+                        <span class="username-p"> Eythan 
+                            <p class="coms"> here is a caption txt txt txt</p></span>
+
+                        <span class="username-p"> Emily 
+                            <p class="coms"> here is a caption txt txt txt</p></span>
+                    </div>
+
+                    <span class="days"> 1 day ago </span>
+
+                </div>
+
+                <div class="bot-bar">
+                    <button class="emoji"> <i class="fa-regular fa-face-smile"></i> </button>
+                    <button class="makecom"> Add a comment... </button>
+                    <button class="submitP"> Post </button>
+                </div>
+            </div> <!--end-->
+
+            <div class="post-item">
+                <div class="top-bar">
+                    <h2 class="userN-post"> mofusand </h2>
+                    <button class="dots"> ... </button>
+                </div>
+
+                <img class="img-post" src="./images/mofusandpost.jpg" alt="mofpost">
+
+                <div class="comsec">
+                    <div class="mid-bar">
+                        <button class="iconbtn"> <i class="fa-regular fa-heart"></i> </button>
+                        <button class="iconbtn"> <i class="fa-regular fa-comment"></i> </button>
+                        <button class="iconbtn"> <i class="fa-regular fa-paper-plane"></i> </button>
+                        <button class="iconbtn4"> <i class="fa-regular fa-bookmark"></i> </button>
+                    </div>
+
+                    <p class="likes"> 300 likes </p>
+
+                    <div class="words">
+                        <span class="username-p"> mofusand 
+                            <p class="coms"> Here is a picture of 4 mofusands together txt txt txt txt txt txt txt txt txttxt txt txt txt txt
+                            <button class="more"> more </button> </p> </span>
+
+                        <span class="username-p"> Eythan 
+                            <p class="coms"> here is a caption txt txt txt</p></span>
+
+                        <span class="username-p"> Emily 
+                            <p class="coms"> here is a caption txt txt txt</p></span>
+                    </div>
+
+                    <span class="days"> 1 day ago </span>
+
+                </div>
+
+                <div class="bot-bar">
+                    <button class="emoji"> <i class="fa-regular fa-face-smile"></i> </button>
+                    <button class="makecom"> Add a comment... </button>
+                    <button class="submitP"> Post </button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
     
 </body>
 </html>
