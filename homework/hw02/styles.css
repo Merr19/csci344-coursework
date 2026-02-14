@@ -163,7 +163,7 @@ p{
 section.story{
     display: flex;
     margin-top: 109px;
-    margin-left: 249px;
+    margin-left: 59px;
     width: calc(100% - 350px);
     height: 18vh;
     flex-direction: column; 
