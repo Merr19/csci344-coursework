@@ -62,7 +62,7 @@ main{
 
 /* 3.6 Card styling */
 
-.card{
+.card img{
     background-color: white;
     border:  1px solid lightgray;
 }
