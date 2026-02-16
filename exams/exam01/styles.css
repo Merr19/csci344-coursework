@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+
+/* 3.1 Body */
+body{
+    background-color: #F0F4EF;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* 3.2 Header + nav */
+header{
+    background-color: #222222;
+    height: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    color: white;
+    font-size: 1.2em;
+    right: 0;
+}
+
+nav > a{
+    color: white;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    margin-left: 1200px;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 1000px;
+}
+
+/* 3.3 Custom font */
+
+h2{
+    font-family: "Tangerine", cursive;
+    font-style: normal;
+}
+
+/* 3.4 Main */
+
+main{
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+/* 3.5 Gallery layout */
+
+.photo-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+/* 3.6 Card styling */
+
+.card{
+    background-color: white;
+    border:  1px solid lightgray;
+}
+
+/* 3.7 Footer */
+
+footer{
+    background-color: #222222;
+    color: white;
+}
+
+/* 3.8 Media queries */
+
+@media screen and (max-width: 700px) {
+    .photo-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+}
