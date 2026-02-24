@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <title>Carousel</title>
+</head>
+
+<body>
+    <main>
+        <h1>Carousel Exercise</h1>
+        <div id="container">
+            <button onclick="moveCarousel('backward')">Back</button>
+            <div id="carousel-track">
+                <!-- 
+                 Hidden window to to hold all of the items. 
+                 Make sure it's width is wide enough to hold all of the slides!
+                 -->
+                <div id="carousel-overflow-container">
+                    <img src="images/img1.jpg" class="carousel-item" />
+                    <img src="images/img2.jpg" class="carousel-item" />
+                    <img src="images/img3.jpg" class="carousel-item" />
+                    <img src="images/img4.jpg" class="carousel-item" />
+                    <div class="carousel-item">A</div>
+                    <div class="carousel-item">B</div>
+                    <div class="carousel-item">C</div>
+                    <div class="carousel-item">D</div>
+                </div>
+            </div>
+            <button onclick="moveCarousel('forward')">Forward</button>
+        </div>
+        <p>Credit: Adapted from <a href="https://www.youtube.com/watch?v=Zd8170gwwmc"
+                target="_blank">https://www.youtube.com/watch?v=Zd8170gwwmc</a></p>
+    </main>
+</body>
+
+<script>
+
+</script>
+
+</html>
