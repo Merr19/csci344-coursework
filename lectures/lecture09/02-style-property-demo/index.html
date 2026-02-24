@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <h1>Selector Practice: Changing Style Properties</h1>
+    <h2>Part 1: Modify the body element's color.</h2>
+    <p>When each button below is clicked, change the body's background color to the correct color.</p>
+    <ol>
+        <li>What element or elements do you want to target? (the body)</li>
+        <li>What do you want to change about each element? (the backgroundColor style property)</li>
+    </ol>
+    <h2>Part 2: Modify the corresponding section's background color.</h2>
+    <p>Do the same thing as above, but target the appropriate section (instead of the body element).</p>
+    <ol>
+        <li>See if you can also make the corresponding section's font bold.</li>
+        <li>See if you can create a reset button that removes all of the styles you just added.</li>
+    </ol>
+    <h2>Part 3: Consolidate makeRed, makeBlue, etc. into a single function.</h2>
+    <p>Refactor your main.js code so that one function controls everything.</p>
+
+    <header>
+        <button id="btn1" onclick="changeElementStyle('red', '#section1')">Red</button>
+        <button id="btn2" onclick="changeElementStyle('Blue','#section2')">Blue</button>
+        <button id="btn3" onclick="changeElementStyle('pink', '#section3')">Pink</button>
+        <button id="btn4" onclick="changeElementStyle('Orange', '#section4')">Orange</button>
+    </header>
+
+    <main>
+        <section id="section1" class="my-section">Red Section</section>
+        <section id="section2" class="my-section">Blue Section</section>
+        <section id="section3" class="my-section">Pink Section</section>
+        <section id="section4" class="my-section">Orange Section</section>
+    </main>
+
+</body>
+
+</html>

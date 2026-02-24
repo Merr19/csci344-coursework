@@ -1,0 +1,31 @@
+body {
+    padding-left: 200px;
+    padding-right: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    padding: 10px 0;
+}
+
+#image-demo {
+    width: 400px;
+    border: solid 1px #000;
+    margin: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.my-section {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    border: solid 1px #000;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
