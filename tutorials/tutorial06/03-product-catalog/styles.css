@@ -1,0 +1,174 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+#productForm {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#productForm h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-group label {
+  min-width: 120px;
+  font-weight: bold;
+  color: #333;
+  flex-shrink: 0;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#productPrice {
+  flex: 0 0 150px;
+  max-width: 150px;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group textarea {
+  resize: vertical;
+  font-family: Arial, sans-serif;
+}
+
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+.form-group:has(input[type="checkbox"]) {
+  align-items: flex-start;
+}
+
+.form-group:has(input[type="checkbox"]) label {
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.form-group:has(input[type="checkbox"]) input[type="checkbox"] {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+#productForm button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 130px;
+}
+
+#productForm button:hover {
+  background-color: #45a049;
+}
+
+#productGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  #productGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.product-card h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.product-card .price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50;
+  margin: 10px 0;
+}
+
+.product-card .description {
+  color: #666;
+  margin: 10px 0;
+}
+
+.product-card .category {
+  display: inline-block;
+  background-color: #e0e0e0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.product-card .stock-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.product-card .stock-status.in-stock {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.product-card .stock-status.out-of-stock {
+  background-color: #f44336;
+  color: white;
+}

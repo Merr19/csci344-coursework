@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Catalog</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Product Catalog</h1>
+    
+    <form id="productForm">
+      <h2>Add New Product</h2>
+      <div class="form-group">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" required />
+      </div>
+      <div class="form-group">
+        <label for="productPrice">Price:</label>
+        <input type="number" id="productPrice" step="0.01" min="0" required />
+      </div>
+      <div class="form-group">
+        <label for="productDescription">Description:</label>
+        <textarea id="productDescription" rows="3" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="productCategory">Category:</label>
+        <select id="productCategory" required>
+          <option value="">Select a category</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Appliances">Appliances</option>
+          <option value="Furniture">Furniture</option>
+          <option value="Clothing">Clothing</option>
+          <option value="Books">Books</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="productInStock">
+          <input type="checkbox" id="productInStock" />
+          In Stock
+        </label>
+      </div>
+      <button type="submit">Add Product</button>
+    </form>
+    
+    <div id="productGrid"></div>
+  </div>
+</body>
+</html>
