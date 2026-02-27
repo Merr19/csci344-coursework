@@ -12,3 +12,25 @@ li{
     font-size: 20px;
     /*ndjnf*/
 }
+
+.classwork{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+#tuts
+{
+    grid-column: 1;
+    
+}
+
+#exams
+{
+    grid-column: 2;
+}
+
+#hw
+{
+    grid-column: 3;
+}
