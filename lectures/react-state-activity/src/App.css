@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    max-width: 500px;
+    margin: 5vh auto;
+}
+
+h1 {
+    text-align: center;
+}
