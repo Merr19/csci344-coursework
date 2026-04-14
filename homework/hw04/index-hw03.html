@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Photo App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="flex justify-between py-5 px-9 bg-white border-b fixed w-full top-0">
+        <h1 class="font-Comfortaa font-bold text-2xl">Photo App</h1>
+        <ul class="flex gap-4 text-sm items-center justify-center">
+            <li>
+                <span>webdev</span>
+            </li>
+            <li>
+                <button class="text-blue-700 py-2">Sign out</button>
+            </li>
+        </ul>
+    </nav>
+
+    <aside class="fixed top-[100px] left-[63vw] w-70 hidden md:block max-w-[300px]">
+        
+        <!-- Profile Panel -->
+        <header class="flex gap-4 items-center">
+            <img src="https://picsum.photos/60/60?q=11" class="rounded-full w-16" />
+            <h2 class="font-Comfortaa font-bold text-2xl">gibsonjack</h2>
+        </header>
+
+        <!-- Suggestions Panel -->
+        <div class="mt-4" id="suggestions">
+            <p class="text-base text-gray-400 font-bold mb-4">Suggestions for you</p>
+
+            <!-- Suggestion #1 -->
+            <section class="flex justify-between items-center mb-4 gap-2">
+                <img src="https://picsum.photos/40/40?q=11" class="rounded-full" />
+                <div class="w-[180px]">
+                    <p class="font-bold text-sm">amandahudson</p>
+                    <p class="text-gray-500 text-xs">suggested for you</p>
+                </div>
+                <button class="text-blue-500 text-sm py-2">follow</button>
+            </section>
+
+            <!-- Suggestion #2 -->
+            <section class="flex justify-between items-center mb-4 gap-2">
+                <img src="https://picsum.photos/40/40?q=12" class="rounded-full" />
+                <div class="w-[180px]">
+                    <p class="font-bold text-sm">qthornton</p>
+                    <p class="text-gray-500 text-xs">suggested for you</p>
+                </div>
+                <button class="text-blue-500 text-sm py-2">follow</button>
+            </section>
+
+        </div>
+    </aside>
+
+    <main class="mt-[100px] md:max-w-[61vw] md:mr-[50px] px-6 md:pl-[5vw] lg:pl-[10vw]">
+        <!-- Stories -->
+        <header class="flex gap-6 bg-white border p-2 overflow-hidden mb-6">
+            
+            <!-- Story #1 -->
+            <div class="flex flex-col justify-center items-center">
+                <img src="https://picsum.photos/50/50?q=10" class="rounded-full border-4 border-gray-300" />
+                <p class="text-xs text-gray-500">gouldjennifer</p>
+            </div>
+            
+            <!-- Story #2 -->
+            <div class="flex flex-col justify-center items-center">
+                <img src="https://picsum.photos/50/50?q=11" class="rounded-full border-4 border-gray-300" />
+                <p class="text-xs text-gray-500">matthew16</p>
+            </div>
+
+        </header>
+
+        <!-- Post 1 -->
+        <section class="bg-white border mb-10">
+            <div class="p-4 flex justify-between">
+                <h3 class="text-lg font-Comfortaa font-bold">gibsonjack</h3>
+                <button class="icon-button"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+            <img src="https://picsum.photos/300/200?q=1" alt="placeholder image" width="300" height="300"
+                class="w-full bg-cover">
+            <div class="p-4">
+                <div class="flex justify-between text-2xl mb-3">
+                    <div>
+                        <button><i class="fas fa-heart text-red-600"></i></button>
+                        <button><i class="far fa-comment"></i></button>
+                        <button><i class="far fa-paper-plane"></i></button>
+                    </div>
+                    <div>
+                        <button><i class="fas fa-bookmark"></i></button>
+                    </div>
+                </div>
+                <p class="font-bold mb-3">30 likes</p>
+                <div class="text-sm mb-3">
+                    <p>
+                        <strong>gibsonjack</strong>
+                        Here is a caption about the photo.
+                        Text text text text text text text text text
+                        text text text text text text text text... <button class="button">more</button>
+                    </p>
+                </div>
+                <p class="text-sm mb-3">
+                    <strong>lizzie</strong>
+                    Here is a comment text text text text text text text text.
+                </p>
+                <p class="text-sm mb-3">
+                    <strong>vanek97</strong>
+                    Here is another comment text text text.
+                </p>
+                <p class="uppercase text-gray-500 text-xs">1 day ago</p>
+            </div>
+            <div class="flex justify-between items-center p-3">
+                <div class="flex items-center gap-3 min-w-[80%]">
+                    <i class="far fa-smile text-lg"></i>
+                    <input type="text" class="min-w-[80%] focus:outline-none" placeholder="Add a comment...">
+                </div>
+                <button class="text-blue-500 py-2">Post</button>
+            </div>
+        </section>
+
+        <!-- Post 2 -->
+        <section class="bg-white border mb-10">
+            <div class="p-4 flex justify-between">
+                <h3 class="text-lg font-Comfortaa font-bold">lindseychandler</h3>
+                <button class="icon-button"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+            <img src="https://picsum.photos/300/200?q=2" alt="placeholder image" width="300" height="300"
+                class="w-full bg-cover">
+            <div class="p-4">
+                <div class="flex justify-between text-2xl mb-3">
+                    <div>
+                        <button><i class="far fa-heart"></i></button>
+                        <button><i class="far fa-comment"></i></button>
+                        <button><i class="far fa-paper-plane"></i></button>
+                    </div>
+                    <div>
+                        <button><i class="far fa-bookmark"></i></button>
+                    </div>
+                </div>
+                <p class="font-bold mb-3">30 likes</p>
+                <div class="text-sm mb-3">
+                    <p>
+                        <strong>gibsonjack</strong>
+                        Here is a caption about the photo.
+                        Text text text text text text text text text
+                        text text text text text text text text... <button class="button">more</button>
+                    </p>
+                </div>
+                <p class="text-sm mb-3">
+                    <strong>lizzie</strong>
+                    Here is a comment text text text text text text text text.
+                </p>
+                <p class="text-sm mb-3">
+                    <strong>vanek97</strong>
+                    Here is another comment text text text.
+                </p>
+                <p class="uppercase text-gray-500 text-xs">1 day ago</p>
+            </div>
+            <div class="flex justify-between items-center p-3">
+                <div class="flex items-center gap-3 min-w-[80%]">
+                    <i class="far fa-smile text-lg"></i>
+                    <input type="text" class="min-w-[80%] focus:outline-none" placeholder="Add a comment...">
+                </div>
+                <button class="text-blue-500 py-2">Post</button>
+            </div>
+        </section>
+
+
+    </main>
+</body>
+
+</html>
