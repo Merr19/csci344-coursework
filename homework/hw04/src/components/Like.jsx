@@ -10,7 +10,7 @@ export default function Like ({likeId, postId, token}){
         const responseData = await postDataToServer(
             token,
             "/api/likes/",
-            {}
+            { post_id: postId }
         );
         setStateLikeId(responseData.id);
     }
@@ -25,7 +25,7 @@ export default function Like ({likeId, postId, token}){
         setStateLikeId(null);
     }
     
-    if (likeId){
+    if (stateLikeId){
         return (
             <button
                 aria-lable="Unlike post"

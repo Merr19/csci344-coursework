@@ -1,15 +1,45 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { getDataFromServer } from "../server-requests";
+import Suggestion from "./Suggestion";
 
 export default function Suggestions({ token }) {
+    const [suggestions, setSuggestions] = useState([]);
+
+    async function getSuggestions() {
+        console.log("Getting suggestions...");
+
+        const responseData = await getDataFromServer(
+            token,
+            "/api/suggestions"
+        );
+
+        setSuggestions(responseData);
+    }
+
+    useEffect(() => {
+        getSuggestions();
+    }, []);
+
+    if (!suggestions.length) {
+        return (
+            <div>
+                <p>Suggestions go here.</p>
+            </div>
+        );
+    }
+
     return (
-        <div className="mt-4">
-            <p className="text-base text-gray-400 font-bold mb-4">
-                Suggestions for you
+        <div>
+            <p className="text-sm font-semibold mb-2">
+                Suggestions
             </p>
 
-            <section className="flex justify-between items-center mb-4 gap-2">
-                Suggestions go here. Fetch data from /api/suggestions endpoint.
-            </section>
+            {suggestions.map((s) => (
+                <Suggestion
+                    key={s.id}
+                    suggestion={s}
+                />
+            ))}
         </div>
     );
 }
