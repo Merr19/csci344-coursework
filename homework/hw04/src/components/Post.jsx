@@ -29,7 +29,11 @@ export default function Post({postData, token}){
                     <div className="flex gap-2">
 
                         {/* like button */}
-                        <Like likeId={postData.current_user_like_id}/>
+                        <Like 
+                            likeId={postData.current_user_like_id}
+                            postId={postData.id}
+                            token={token}
+                        />
 
                         {/* misc. buttons */}
                         <button><i className="far fa-comment"></i></button>

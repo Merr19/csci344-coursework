@@ -1,0 +1,72 @@
+1A.Name three tables that correspond 
+   to the Resource types.
+    -Sneaker
+    -Brand
+    -Favorite
+1B.Which table is not defined by your 
+   YAML but still exists?
+    -Users exists but is not defined by our YAML.
+
+2.Pick one resource table (e.g. sneakers). Which columns look 
+  like they are referencing data in other tables (this is called a “foreign key”)?
+    -Sneakers is refrencing brand.
+
+3.What looks different between the required and optional fields in the database?
+    -Fields that are required are boolean having either true or false assigned
+    to them while optional fields don't need the same values.
+
+4.what is the difference between changing data with npm run seed and changing data 
+  only through the REST API or data grid?
+    -npm run seed changes the databases directly, while reset api
+
+5.Why should you run npm run generate again before npm run seed if you just edited 
+  api.config.yaml?
+    -npm run generate updates the database based on chnages within yamal. 
+    npm run seed inserts the new updates.
+
+6.How did the list request URL change when you applied the filter(s)
+    -When I applied filters my URL didnt change, but when I opened the network
+    tab showed changes for example, when I added a filter for the brand and 
+    availability the network showed "sneakers?brand=3$&is_available=false".
+
+7.What URL would you use for a GET request that asks the server for sneakers whose name 
+  includes the substring running?
+    -/api/sneakers?name=running
+
+8.What is one difference between experimenting in /api/docs and experimenting in the 
+  data grid?
+    -/api/docs lets us send HTTP requests on the api, while the data grid is an 
+    interface that allows for editing and viewing database rows without requests
+
+9.What is one advantage of introducing a separate PlantType resource 
+  (with a relation from Plant) instead of keeping species as a plain 
+  string on every plant row?
+    -An advantage of introducing PlantType instead of keeping species is that
+    it prevents duplicates from happening, and its reuseable.
+
+10.Final project: List at least three REST paths you expect 
+   to need for your final project (they can be placeholders like /api/...). For each, name:
+    The resource
+    the data fields you’ll need
+    Which fields will be queryable
+    One relationship you might add 
+    (e.g., Sneakers are linked a Brand resource in another table)
+
+  At the moment I have the idea for a video game review site
+  
+  1. Resource: Game 
+     Fields: title, releaseYear, platform, genre
+     Queryable: title, genre, platform, releaseYear
+     Relationship: Genere and platform
+
+  2. Resource: review
+     Fields: game, rating, comment, user, comment
+     Queryable: game, rating, user
+     Relationship: Review and Game
+
+  3. Resource: Genere
+     Fields: name (action, fps, rpg)
+     Queryable: name
+     Relationship: Genere
+  
+

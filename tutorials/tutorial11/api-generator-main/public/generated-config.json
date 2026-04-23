@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "configPath": "api.config.yaml",
+    "generatedAt": "2026-04-23T00:44:15.213Z",
+    "seedDir": "data\\sample-data"
+  },
+  "resources": [
+    {
+      "type": "PlantType",
+      "tableName": "plant_types",
+      "fileBase": "plant-types",
+      "path": "/api/plant-types",
+      "operations": [
+        "list",
+        "retrieve",
+        "create",
+        "update",
+        "delete"
+      ],
+      "shareable": false,
+      "ownershipEnabled": true,
+      "fields": [
+        {
+          "name": "name",
+          "type": "string",
+          "storageType": "string",
+          "required": true,
+          "relation": null,
+          "query": {
+            "param": "name",
+            "op": "contains"
+          }
+        }
+      ],
+      "permissions": {
+        "list": "public",
+        "retrieve": "public",
+        "create": "user",
+        "update": "owner",
+        "delete": "owner"
+      },
+      "queryFilters": [
+        {
+          "param": "name",
+          "fieldName": "name",
+          "op": "contains",
+          "type": "string",
+          "storageType": "string",
+          "relation": null
+        },
+        {
+          "param": "owner_id",
+          "fieldName": "owner_id",
+          "op": "eq",
+          "type": "integer",
+          "storageType": "integer",
+          "relation": null
+        }
+      ]
+    },
+    {
+      "type": "Plant",
+      "tableName": "plants",
+      "fileBase": "plants",
+      "path": "/api/plants",
+      "operations": [
+        "list",
+        "retrieve",
+        "create",
+        "update",
+        "delete"
+      ],
+      "shareable": false,
+      "ownershipEnabled": true,
+      "fields": [
+        {
+          "name": "name",
+          "type": "string",
+          "storageType": "string",
+          "required": true,
+          "relation": null,
+          "query": {
+            "param": "name",
+            "op": "contains"
+          }
+        },
+        {
+          "name": "image_url",
+          "type": "image_url",
+          "storageType": "image_url",
+          "required": true,
+          "relation": null,
+          "query": {
+            "param": "image_url",
+            "op": "contains"
+          }
+        },
+        {
+          "name": "plant_type",
+          "type": "PlantType",
+          "storageType": "integer",
+          "required": true,
+          "relation": {
+            "resourceType": "PlantType",
+            "targetField": "id"
+          },
+          "query": {
+            "param": "plant_type",
+            "op": "eq"
+          }
+        },
+        {
+          "name": "planted_year",
+          "type": "integer",
+          "storageType": "integer",
+          "required": false,
+          "relation": null,
+          "query": null
+        },
+        {
+          "name": "latitude",
+          "type": "number",
+          "storageType": "number",
+          "required": true,
+          "relation": null,
+          "query": null
+        },
+        {
+          "name": "longitude",
+          "type": "number",
+          "storageType": "number",
+          "required": true,
+          "relation": null,
+          "query": null
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "storageType": "text",
+          "required": false,
+          "relation": null,
+          "query": null
+        }
+      ],
+      "permissions": {
+        "list": "public",
+        "retrieve": "public",
+        "create": "user",
+        "update": "owner",
+        "delete": "owner"
+      },
+      "queryFilters": [
+        {
+          "param": "name",
+          "fieldName": "name",
+          "op": "contains",
+          "type": "string",
+          "storageType": "string",
+          "relation": null
+        },
+        {
+          "param": "image_url",
+          "fieldName": "image_url",
+          "op": "contains",
+          "type": "image_url",
+          "storageType": "image_url",
+          "relation": null
+        },
+        {
+          "param": "plant_type",
+          "fieldName": "plant_type",
+          "op": "eq",
+          "type": "PlantType",
+          "storageType": "integer",
+          "relation": {
+            "resourceType": "PlantType",
+            "targetField": "id"
+          }
+        },
+        {
+          "param": "owner_id",
+          "fieldName": "owner_id",
+          "op": "eq",
+          "type": "integer",
+          "storageType": "integer",
+          "relation": null
+        }
+      ]
+    },
+    {
+      "type": "Comment",
+      "tableName": "comments",
+      "fileBase": "comments",
+      "path": "/api/comments",
+      "operations": [
+        "list",
+        "retrieve",
+        "create",
+        "update",
+        "delete"
+      ],
+      "shareable": false,
+      "ownershipEnabled": true,
+      "fields": [
+        {
+          "name": "body",
+          "type": "text",
+          "storageType": "text",
+          "required": true,
+          "relation": null,
+          "query": null
+        },
+        {
+          "name": "plant",
+          "type": "Plant",
+          "storageType": "integer",
+          "required": true,
+          "relation": {
+            "resourceType": "Plant",
+            "targetField": "id"
+          },
+          "query": {
+            "param": "plant",
+            "op": "eq"
+          }
+        }
+      ],
+      "permissions": {
+        "list": "public",
+        "retrieve": "public",
+        "create": "user",
+        "update": "owner",
+        "delete": "owner"
+      },
+      "queryFilters": [
+        {
+          "param": "plant",
+          "fieldName": "plant",
+          "op": "eq",
+          "type": "Plant",
+          "storageType": "integer",
+          "relation": {
+            "resourceType": "Plant",
+            "targetField": "id"
+          }
+        },
+        {
+          "param": "owner_id",
+          "fieldName": "owner_id",
+          "op": "eq",
+          "type": "integer",
+          "storageType": "integer",
+          "relation": null
+        }
+      ]
+    }
+  ]
+}

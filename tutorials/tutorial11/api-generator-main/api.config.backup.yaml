@@ -1,0 +1,95 @@
+resources:
+  - type: Sneaker
+    path: /api/sneakers
+    operations: [list, retrieve, create, update, delete]
+    fields:
+      - name: name
+        type: string
+        required: true
+        query: true
+      - name: brand
+        type: Brand
+        query: true
+      - name: price
+        type: number
+        required: true
+        query: true
+      - name: photo
+        type: image_url
+        required: true
+      - name: size
+        type: integer
+        query: true
+      - name: is_available
+        type: boolean
+        query: true
+      - name: description
+        type: text
+    permissions:
+      list: public
+      retrieve: public
+      create: user
+      update: owner
+      delete: owner
+
+  - type: Brand
+    path: /api/brands
+    operations: [list, retrieve, create, update, delete]
+    fields:
+      - name: name
+        type: string
+        required: true
+      - name: description
+        type: text
+    permissions:
+      list: public
+      retrieve: public
+      create: user
+      update: owner
+      delete: owner
+  - type: Favorite
+    path: /api/favorites
+    operations: [list, retrieve, create, update, delete]
+    fields:
+      - name: note
+        type: string
+      - name: sneaker
+        type: Sneaker
+        required: true
+        query: true
+    permissions:
+      list: owner
+      retrieve: owner
+      create: user
+      update: owner
+      delete: owner
+
+  - type: Order
+    path: /api/orders
+    operations: [list, retrieve, create, update, delete]
+    fields:
+      - name: customer_name
+        type: string
+        required: true
+      - name: email
+        type: string
+        required: true
+      - name: status
+        type: string
+        required: true
+        query: true
+      - name: total
+        type: number
+        required: true
+      - name: created_at
+        type: datetime
+      - name: sneaker
+        type: Sneaker
+        required: true
+        query: true
+    permissions:
+      list: owner
+      retrieve: owner
+      create: user
+      update: owner
+      delete: owner

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data grid — API Generator</title>
+    <link rel="stylesheet" href="/_framework/styles/home.css" />
+    <link rel="stylesheet" href="/_framework/styles/data-grid.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tabulator-tables@6.3.1/dist/css/tabulator.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="data-shell">
+        <section class="auth-bar" id="auth-bar">
+            <div>
+                <button type="button" id="logout-btn" class="button ghost small" hidden>Log out</button>
+                <form id="login-form" class="auth-form">
+                    <label>
+                        <input aria-label="Username" placeholder="Enter your username" id="username" name="username"
+                            autocomplete="username" />
+                    </label>
+                    <label>
+                        <input aria-label="Password" placeholder="Enter your password" id="password" name="password"
+                            type="password" autocomplete="current-password" />
+                    </label>
+                    <button type="submit" class="button primary small">Log in</button>
+                </form>
+                <span id="token-hint" class="status ok"></span>
+            </div>
+            <div>
+                <a href="/">Home</a> ·
+                <a href="/api/docs">API docs</a>
+            </div>
+        </section>
+
+        <p id="auth-message" class="status" aria-live="polite"></p>
+
+        <div class="toolbar" id="resource-controls">
+            <div class="toolbar-content">
+                <!-- Endpoint Selection -->
+                <label>
+                    Resource
+                    <select id="resource-select">
+                        <option value="">Loading…</option>
+                    </select>
+                </label>
+                <div class="toolbar-actions" id="toolbar-actions" hidden>
+                    <div class="button-group" role="group" aria-label="Row actions">
+                        <button type="button" id="add-row-btn" aria-label="Add record" class="button primary small">
+                            <i class="fa-solid fa-plus" aria-hidden="true"></i> Add
+                        </button>
+                        <div class="filter-dropdown" id="filter-dropdown">
+                            <button type="button" id="filter-open-btn" class="button ghost small filter-open-btn"
+                                aria-label="Filters" aria-haspopup="dialog" aria-expanded="false"
+                                aria-controls="filter-panel" hidden>
+                                <i class="fa-solid fa-filter" aria-hidden="true"></i>
+                            </button>
+                            <div id="filter-panel" class="filter-dropdown-panel" role="dialog"
+                                aria-labelledby="filter-panel-title" hidden>
+                                <div class="filter-dialog-header">
+                                    <h2 id="filter-panel-title" class="filter-dialog-title">Filters</h2>
+                                    <button type="button" id="filter-close-btn"
+                                        class="button ghost small filter-dialog-close" aria-label="Close filters">
+                                        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div class="filter-modal-body filter-bar">
+                                    <div class="filter-bar-top">
+                                        <div class="filter-fields" id="filter-fields"></div>
+                                        <div class="filter-actions">
+                                            <button type="button" id="apply-filters-btn" class="button ghost small">Apply
+                                                filters</button>
+                                            <button type="button" id="clear-filters-btn" class="button ghost small">Clear</button>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="filter-api-link-wrap" id="filter-api-link-wrap" hidden>
+                                        <span class="filter-api-link-label">List URL</span>
+                                        <a id="filter-api-link" class="filter-api-link" href="#" target="_blank"
+                                            rel="noopener noreferrer"></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" id="filter-clear-toolbar-btn"
+                            class="button ghost small filter-clear-toolbar-btn" hidden aria-label="Clear filters">
+                            <i class="fa-solid fa-filter-circle-xmark" aria-hidden="true"></i>
+                            <span>Clear</span>
+                        </button>
+                    </div>
+                    <div id="view-toggle" class="view-mode-toggle" role="group" aria-label="Data view" hidden>
+                        <button type="button" id="view-mode-table-btn" class="view-mode-toggle__btn is-active"
+                            aria-pressed="true" aria-label="Spreadsheet view">
+                            <i class="fa-solid fa-table" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" id="view-mode-code-btn" class="view-mode-toggle__btn" aria-pressed="false"
+                            aria-label="JSON view">
+                            <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p id="status" class="status" aria-live="polite"></p>
+
+        <div id="grid-wrap">
+            <div id="data-table"></div>
+        </div>
+        <div id="json-wrap" hidden>
+            <pre id="json-view" class="json-view-panel">[]</pre>
+        </div>
+    </main>
+
+    <script>
+        // Optional: if you open this file from somewhere other than `npm start`, point at the API:
+        // window.__API_BASE__ = "http://127.0.0.1:3100";
+        // Or use: /spreadsheet?api=http://127.0.0.1:3100
+    </script>
+    <script src="/_framework/js/data-grid.js"></script>
+</body>
+
+</html>
