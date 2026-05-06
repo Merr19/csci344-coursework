@@ -12,7 +12,7 @@ export default function Login({ handleLoggedIn }) {
     setError("");
 
     try {
-      fetch(`${getApiBaseUrl()}/api/auth/login`, {
+      const res = await fetch(`${getApiBaseUrl()}/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
