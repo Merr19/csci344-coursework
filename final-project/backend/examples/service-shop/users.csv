@@ -1,0 +1,6 @@
+id,username,password,role,display_name,email,seed_as
+1,admin,password,admin,Admin User,admin@example.com,yes
+2,alex,password,technician,Alex Rivera,alex.rivera@example.com,no
+3,maya,password,service_advisor,Maya Chen,maya.chen@example.com,no
+4,jordan,password,technician,Jordan Patel,jordan.patel@example.com,no
+5,casey,password,admin,Casey Morgan,casey.morgan@example.com,no

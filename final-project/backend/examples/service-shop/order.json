@@ -1,0 +1,19 @@
+{
+  "apiVersion": "1",
+  "baseUrlEnv": "API_BASE",
+  "directory": "data/sample-data",
+  "resources": [
+    {
+      "type": "Customer",
+      "path": "/api/customers",
+      "file": "customers.csv"
+    },
+    {
+      "type": "VehicleService",
+      "path": "/api/services",
+      "file": "services.csv"
+    }
+  ],
+  "usersFile": "users.csv",
+  "seedUserColumn": "seed_as"
+}

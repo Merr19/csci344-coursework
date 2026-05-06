@@ -1,0 +1,52 @@
+# Sample API: campus fruit trees and bushes
+# Copy this file to the project root as api.config.yaml (backup the default first if you want).
+
+resources:
+  - type: PlantType
+    path: /api/plant-types
+    operations: [list, retrieve, create, update, delete]
+    fields:
+      - name: name
+        type: string
+        required: true
+        query: true
+      - name: description
+        type: text
+    permissions:
+      list: public
+      retrieve: public
+      create: user
+      update: [admin, owner]
+      delete: [admin, owner]
+
+  - type: Plant
+    path: /api/plants
+    operations: [list, retrieve, create, update, delete]
+    fields:
+      - name: name
+        type: string
+        required: true
+        query: true
+      - name: image_url
+        type: image_url
+        query: true
+      - name: species
+        type: PlantType
+        required: true
+        query: true
+      - name: planted_year
+        type: integer
+      - name: latitude
+        type: number
+        required: true
+      - name: longitude
+        type: number
+        required: true
+      - name: notes
+        type: text
+    permissions:
+      list: public
+      retrieve: public
+      create: user
+      update: [admin, owner]
+      delete: [admin, owner]

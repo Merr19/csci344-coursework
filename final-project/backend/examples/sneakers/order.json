@@ -1,0 +1,29 @@
+{
+  "apiVersion": "1",
+  "baseUrlEnv": "API_BASE",
+  "directory": "examples/sneakers-new",
+  "resources": [
+    {
+      "type": "Brand",
+      "path": "/api/brands",
+      "file": "brands.csv"
+    },
+    {
+      "type": "Sneaker",
+      "path": "/api/sneakers",
+      "file": "sneakers.csv"
+    },
+    {
+      "type": "Favorite",
+      "path": "/api/favorites",
+      "file": "favorites.csv"
+    },
+    {
+      "type": "Order",
+      "path": "/api/orders",
+      "file": "orders.csv"
+    }
+  ],
+  "usersFile": "users.csv",
+  "seedUserColumn": "seed_as"
+}

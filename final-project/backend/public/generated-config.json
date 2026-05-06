@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "configPath": "C:\\Users\\meril\\OneDrive\\Desktop\\csci344\\final-project\\backend\\api.config.yaml",
+    "generatedAt": "2026-05-05T23:53:35.092Z",
+    "seedDir": "data\\sample-data"
+  },
+  "userResource": {
+    "type": "User",
+    "tableName": "users",
+    "fields": [
+      {
+        "name": "role",
+        "type": "string",
+        "storageType": "string",
+        "required": true,
+        "default": "user",
+        "choices": [
+          "user",
+          "admin"
+        ],
+        "relation": null,
+        "query": {
+          "param": "role",
+          "op": "eq"
+        }
+      }
+    ]
+  },
+  "resources": [
+    {
+      "type": "Game",
+      "tableName": "games",
+      "fileBase": "games",
+      "path": "/api/games",
+      "operations": [
+        "list",
+        "retrieve",
+        "create",
+        "update",
+        "delete"
+      ],
+      "shareable": false,
+      "ownershipEnabled": true,
+      "fields": [
+        {
+          "name": "title",
+          "type": "string",
+          "storageType": "string",
+          "required": true,
+          "relation": null,
+          "query": {
+            "param": "title",
+            "op": "contains"
+          }
+        },
+        {
+          "name": "image_url",
+          "type": "image_url",
+          "storageType": "image_url",
+          "required": false,
+          "relation": null,
+          "query": {
+            "param": "image_url",
+            "op": "contains"
+          }
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "storageType": "string",
+          "required": true,
+          "relation": null,
+          "query": {
+            "param": "status",
+            "op": "contains"
+          }
+        },
+        {
+          "name": "rating",
+          "type": "integer",
+          "storageType": "integer",
+          "required": false,
+          "relation": null,
+          "query": {
+            "param": "rating",
+            "op": "eq"
+          }
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "storageType": "text",
+          "required": false,
+          "relation": null,
+          "query": null
+        }
+      ],
+      "permissions": {
+        "list": "user",
+        "retrieve": "user",
+        "create": "user",
+        "update": [
+          "admin",
+          "owner"
+        ],
+        "delete": [
+          "admin",
+          "owner"
+        ]
+      },
+      "queryFilters": [
+        {
+          "param": "title",
+          "fieldName": "title",
+          "op": "contains",
+          "type": "string",
+          "storageType": "string",
+          "relation": null,
+          "choices": null
+        },
+        {
+          "param": "image_url",
+          "fieldName": "image_url",
+          "op": "contains",
+          "type": "image_url",
+          "storageType": "image_url",
+          "relation": null,
+          "choices": null
+        },
+        {
+          "param": "status",
+          "fieldName": "status",
+          "op": "contains",
+          "type": "string",
+          "storageType": "string",
+          "relation": null,
+          "choices": null
+        },
+        {
+          "param": "rating",
+          "fieldName": "rating",
+          "op": "eq",
+          "type": "integer",
+          "storageType": "integer",
+          "relation": null,
+          "choices": null
+        },
+        {
+          "param": "owner_id",
+          "fieldName": "owner_id",
+          "op": "eq",
+          "type": "integer",
+          "storageType": "integer",
+          "relation": null
+        }
+      ]
+    }
+  ]
+}

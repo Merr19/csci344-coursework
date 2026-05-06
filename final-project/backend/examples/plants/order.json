@@ -1,0 +1,19 @@
+{
+  "apiVersion": "1",
+  "baseUrlEnv": "API_BASE",
+  "directory": "examples/plants-new",
+  "resources": [
+    {
+      "type": "PlantType",
+      "path": "/api/plant-types",
+      "file": "plant-types.csv"
+    },
+    {
+      "type": "Plant",
+      "path": "/api/plants",
+      "file": "plants.csv"
+    }
+  ],
+  "usersFile": "users.csv",
+  "seedUserColumn": "seed_as"
+}

@@ -1,0 +1,86 @@
+resources:
+  - type: User
+    fields:
+      - name: role
+        type: string
+        required: true
+        default: user
+        choices: [user, admin, technician, service_advisor]
+        query: true
+      - name: email
+        type: string
+        required: true
+      - name: display_name
+        type: string
+        query: true
+
+  - type: Customer
+    path: /api/customers
+    operations: [list, retrieve, create, update, delete]
+    fields:
+      - name: name
+        type: string
+        required: true
+        query: true
+      - name: phone
+        type: string
+        required: true
+      - name: email
+        type: string
+        required: true
+      - name: preferred_contact
+        type: string
+        required: true
+        choices: [phone, email, text]
+        default: email
+        query: true
+    permissions:
+      list: public
+      retrieve: public
+      create: [service_advisor, technician, admin]
+      update: [service_advisor, technician, admin]
+      delete: [admin]
+
+  - type: VehicleService
+    path: /api/services
+    operations: [list, retrieve, create, update, delete]
+    fields:
+      - name: vin
+        type: string
+        required: true
+        query: true
+      - name: make_model
+        type: string
+        required: true
+        query: true
+      - name: customer
+        type: Customer
+        required: true
+        query: true
+      - name: technician
+        type: User
+        required: true
+        query: true
+      - name: service_date
+        type: date
+        required: true
+      - name: mileage
+        type: integer
+        required: true
+      - name: status
+        type: string
+        required: true
+        choices: [scheduled, in_progress, complete, waiting_on_parts]
+        default: scheduled
+        query: true
+      - name: service_details
+        type: text
+        required: true
+      - name: parts_replaced
+        type: text
+    permissions:
+      list: public
+      retrieve: public
+      create: [owner, technician, service_advisor, admin]
+      update: [owner, technician, service_advisor, admin]
+      delete: [owner, admin]

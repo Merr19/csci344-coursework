@@ -1,0 +1,7 @@
+id,owner_id,title,genre,platform,release_date,cover_image,multiplayer,summary
+1,1,Elden Ring,Action RPG,1,2022-02-25,/student/images/video-games/elden-ring.jpg,1,Open-world fantasy action RPG with difficult combat.
+2,1,Forza Horizon 5,Racing,2,2021-11-09,/student/images/video-games/forza-horizon-5.jpg,1,Arcade racing game set in a large open-world Mexico map.
+3,1,The Legend of Zelda: Tears of the Kingdom,Adventure,3,2023-05-12,/student/images/video-games/totk.jpg,0,Exploration-focused adventure with physics-based building systems.
+4,1,Hades,Roguelike,4,2020-09-17,/student/images/video-games/hades.jpg,0,Fast-paced roguelike dungeon crawler with strong narrative.
+5,1,Baldur's Gate 3,RPG,4,2023-08-03,/student/images/video-games/bg3.jpg,1,Party-based fantasy RPG with turn-based tactical combat.
+6,1,Portal 2,Puzzle,5,2011-04-19,/student/images/video-games/portal-2.jpg,1,First-person puzzle game centered around portal mechanics.

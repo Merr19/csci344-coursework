@@ -1,0 +1,36 @@
+# Sample API: campus fruit trees and bushes
+# Copy this file to the project root as api.config.yaml (backup the default first if you want).
+
+resources:
+  - type: Game
+    path: /api/games
+    operations: [list, retrieve, create, update, delete]
+
+    fields:
+      - name: title
+        type: string
+        required: true
+        query: true
+
+      - name: image_url
+        type: image_url
+        query: true
+
+      - name: status
+        type: string
+        required: true
+        query: true
+
+      - name: rating
+        type: integer
+        query: true
+
+      - name: notes
+        type: text
+
+    permissions:
+      list: user
+      retrieve: user
+      create: user
+      update: [admin, owner]
+      delete: [admin, owner]

@@ -1,0 +1,10 @@
+id,owner_id,name,brand,price,photo,size,is_available,description
+1,1,Sample name 1,1,12.99,/student/images/sneakers/sneaker1.png,1,1,Sample description paragraph 1.
+2,1,Sample name 2,2,13.99,/student/images/sneakers/sneaker2.png,2,0,Sample description paragraph 2.
+3,1,Sample name 3,3,14.99,/student/images/sneakers/sneaker3.png,3,1,Sample description paragraph 3.
+4,1,Sample name 4,4,15.99,/student/images/sneakers/sneaker4.png,4,0,Sample description paragraph 4.
+5,1,Sample name 5,5,16.99,/student/images/sneakers/sneaker5.png,5,1,Sample description paragraph 5.
+6,1,Sample name 6,5,16.99,/student/images/sneakers/sneaker6.png,4,1,Sample description paragraph 6.
+7,1,Sample name 7,5,16.99,/student/images/sneakers/sneaker7.png,1,1,Sample description paragraph 7.
+8,1,Sample name 8,5,16.99,/student/images/sneakers/sneaker8.png,2,1,Sample description paragraph 8.
+9,1,Sample name 9,5,16.99,/student/images/sneakers/sneaker9.png,3,1,Sample description paragraph 9.

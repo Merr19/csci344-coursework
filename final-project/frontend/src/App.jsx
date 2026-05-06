@@ -3,31 +3,30 @@ import { clearToken, getToken, getUsername } from "./tokenStorage.js";
 import Login from "./components/Login.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Homepage from "./components/Homepage.jsx";
-import BarChart from "./components/BarChart.jsx";
 
 export default function App() {
-  const savedToken = getToken();
-  const savedUsername = getUsername();
-  const [hasToken, setHasToken] = useState(savedToken ? true : false);
+  const [hasToken, setHasToken] = useState(!!getToken());
+  const [username, setUsername] = useState(getUsername());
 
   function handleLoggedIn() {
     setHasToken(true);
+    setUsername(getUsername());
   }
 
   function handleLogout() {
     clearToken();
     setHasToken(false);
+    setUsername(null);
   }
 
   if (!hasToken) {
     return <Login handleLoggedIn={handleLoggedIn} />;
   }
 
-//this is the main screen of the app after you login
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      <Navbar handleLogout={handleLogout} username={savedUsername} />
-      <Homepage username={savedUsername} />
+      <Navbar handleLogout={handleLogout} username={username} />
+      <Homepage username={username} />
     </div>
   );
 }

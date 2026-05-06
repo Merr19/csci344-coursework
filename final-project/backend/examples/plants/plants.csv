@@ -1,0 +1,34 @@
+id,owner_id,name,image_url,species,planted_year,latitude,longitude,notes
+1,1,Riverside Highbush Row,/student/images/plants/blueberries.png,1,2021,35.616616,-82.564108,Mixed ‘Bluecrop’ and ‘Duke’ blueberries; used by the hort club to track bloom timing near the river corridor.
+2,1,Concord Arbor Walk,/student/images/plants/grapes.png,3,2016,35.615207,-82.564548,‘Concord’ grapes trained over a walkway arbor; a popular shaded path during late summer.
+3,1,Campus Walk Blueberry Hedge,/student/images/plants/blueberries.png,1,2019,35.617035,-82.563603,‘Legacy’ blueberries line a main pedestrian route; mulched annually by student volunteers during service days.
+4,1,Brown Turkey Fig Terrace,/student/images/plants/figs.png,2,2018,35.615775,-82.563214,Classic ‘Brown Turkey’ fig benefiting from heat radiating off nearby campus buildings.
+5,1,Quad Pollinator Blueberries,/student/images/plants/blueberries.png,1,2016,35.617193,-82.562762,Planted with pollinator companions; often used in ecology classes to observe bee activity in early summer.
+6,1,Norton Research Vines,/student/images/plants/grapes.png,3,2019,35.61504,-82.565279,‘Norton’ grapes used in fermentation and food science coursework.
+7,1,Library Slope Blueberry Patch,/student/images/plants/blueberries.png,1,2023,35.616961,-82.561771,Young ‘Elliott’ bushes on a south-facing slope; part of a student-led soil amendment experiment.
+8,1,Honeycrisp Teaching Orchard,/student/images/plants/apple.png,6,2018,35.615007,-82.563568,‘Honeycrisp’ apples used in long-term phenology tracking by environmental science students.
+9,1,Athletics Edge Blueberries,/student/images/plants/blueberries.png,1,2014,35.616294,-82.560877,Established ‘Bluejay’ row; fruit is occasionally harvested for campus dining specials.
+10,1,Courtyard Celeste Fig,/student/images/plants/figs.png,2,2020,35.615257,-82.562837,‘Celeste’ fig in movable container; relocated seasonally for student landscape design demos.
+11,1,Student Garden Blueberries,/student/images/plants/blueberries.png,1,2022,35.6168,-82.5639,Added by a student sustainability initiative; maintained as part of a service-learning course.
+12,1,Muscadine Garden Row,/student/images/plants/grapes.png,3,2014,35.61524,-82.566155,Native muscadine grapes highlight regional agriculture in campus sustainability tours.
+13,1,Triple Crown Bramble Bed,/student/images/plants/blackberry.png,4,2020,35.616501,-82.564959,‘Triple Crown’ blackberries maintained by student crews; used for pruning workshops.
+14,1,Liberty Disease-Resistant Block,/student/images/plants/apple.png,6,2015,35.61442,-82.563959,‘Liberty’ apples highlight low-spray orchard management practices.
+15,4,East Quad Blueberry Cluster,/student/images/plants/blueberries.png,1,2020,35.6173,-82.5622,Clustered planting used for yield comparison across soil types.
+16,5,Chicago Hardy Study Plot,/student/images/plants/figs.png,2,2015,35.614537,-82.562859,Used in plant resilience studies; demonstrates die-back and regrowth cycles in colder winters.
+17,4,Chancellor Trellis Block,/student/images/plants/grapes.png,3,2021,35.615851,-82.566935,New trellis system installed as part of a student-built irrigation and erosion control project.
+18,4,Chester Late-Season Row,/student/images/plants/blackberry.png,4,2018,35.617134,-82.564971,"‘Chester’ variety extends harvest into the academic year, aligning with fall semester classes."
+19,4,Contender Campus Peach,/student/images/plants/peach.png,5,2019,35.616535,-82.563178,‘Contender’ peach selected for cold tolerance; monitored by students studying plant diseases.
+20,1,GoldRush Storage Orchard,/student/images/plants/apple.png,6,2017,35.614,-82.564795,‘GoldRush’ apples used in post-harvest storage experiments in campus labs.
+21,1,Greenway Edge Blueberries,/student/images/plants/blueberries.png,1,2017,35.6161,-82.565,Edge planting along campus greenway; attracts both birds and pedestrians.
+22,1,Atrium Teaching Fig,/student/images/plants/figs.png,2,2022,35.613793,-82.563387,Protected ‘LSU Purple’ fig used in indoor/outdoor microclimate comparisons.
+23,1,Teaching Vineyard Plot,/student/images/plants/grapes.png,3,2023,35.616789,-82.567255,Hands-on viticulture training area where students practice pruning and canopy management.
+24,1,Navaho Fence Line Blackberries,/student/images/plants/blackberry.png,4,2015,35.617792,-82.564505,‘Navaho’ blackberries planted along fencing; demonstrates effects of shade gradients.
+25,1,Reliance Orchard Slope,/student/images/plants/peach.png,5,2016,35.61638,-82.562401,‘Reliance’ peaches used in frost damage observation labs.
+26,1,Enterprise Cider Project Tree,/student/images/plants/apple.png,6,2022,35.613924,-82.565955,Young ‘Enterprise’ tree tied to student cider-making projects.
+27,1,Pollinator Garden Blueberries,/student/images/plants/blueberries.png,1,2021,35.6175,-82.563,Integrated into a pollinator garden maintained by environmental studies students.
+28,1,Ramsey Knoll Fig Grove,/student/images/plants/figs.png,2,2017,35.613259,-82.564417,Open planting area where students observe fruit ripening patterns and insect interactions.
+29,2,South Slope Grapes,/student/images/plants/grapes.png,3,2018,35.6156,-82.5678,Additional teaching vines used in pruning labs.
+30,2,Prime-Ark Trial Plot,/student/images/plants/blackberry.png,4,2017,35.618245,-82.562386,Primocane-fruiting ‘Prime-Ark Freedom’ used in crop timing studies.
+31,1,Redhaven Heritage Tree,/student/images/plants/peach.png,5,2013,35.614961,-82.561355,Old ‘Redhaven’ tree used in pruning demonstrations and yield estimation exercises.
+32,1,Arkansas Black Heritage Row,/student/images/plants/apple.png,6,2014,35.614484,-82.566896,‘Arkansas Black’ apples featured in campus history and regional agriculture discussions.
+33,2,My Plant,/student/images/plants/apple.png,6,2020,35.644484,-82.514417,Some Notes

@@ -1,31 +1,36 @@
 import { getToken } from "./tokenStorage.js";
 
 export function getApiBaseUrl() {
-  return import.meta.env.VITE_API_BASE_URL;
+  return "http://localhost:3100";
 }
 
 export async function sendRequest(path, options = {}) {
   const token = getToken();
-  const headers = { "Content-Type": "application/json" };
+
+  const headers = {
+    "Content-Type": "application/json",
+  };
 
   if (token) {
     headers.Authorization = "Bearer " + token;
   }
 
   const response = await fetch(getApiBaseUrl() + path, {
-    method: options.method,
+    method: options.method || "GET",
     body: options.body,
     headers,
   });
 
   if (!response.ok) {
     let message = `Request failed (${response.status})`;
+
     try {
       const errorBody = await response.json();
       message = errorBody.error || errorBody.message || message;
     } catch {
-      // Keep the default message if the server does not return JSON.
+      // keep default message
     }
+
     throw new Error(message);
   }
 
@@ -36,8 +41,26 @@ export async function sendRequest(path, options = {}) {
   return response.json();
 }
 
-// TODO: Add your own endpoint functions below.
-// Example:
-// export function getItems() {
-//   return sendRequest("/api/items");
-// }
+export function getItems() {
+  return sendRequest("/api/games");
+}
+
+export function createItem(data) {
+  return sendRequest("/api/games", {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+}
+
+export function updateItem(id, data) {
+  return sendRequest(`/api/games/${id}`, {
+    method: "PATCH",
+    body: JSON.stringify(data),
+  });
+}
+
+export function deleteItem(id) {
+  return sendRequest(`/api/games/${id}`, {
+    method: "DELETE",
+  });
+}

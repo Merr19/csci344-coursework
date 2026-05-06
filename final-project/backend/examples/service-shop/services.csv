@@ -1,0 +1,6 @@
+id,owner_id,vin,make_model,customer,technician,service_date,mileage,status,service_details,parts_replaced
+1,3,1HGCM82633A004352,2018 Honda Accord,1,2,2026-04-15,64210,complete,Oil change tire rotation and brake inspection,Oil filter
+2,3,5NMS3CAD8LH123456,2020 Hyundai Santa Fe,2,4,2026-04-18,38540,in_progress,Diagnose check engine light and rough idle,
+3,5,3FA6P0H75JR234567,2018 Ford Fusion,3,2,2026-04-20,71280,waiting_on_parts,Replace front brake pads and resurface rotors,Front brake pads
+4,5,JTDKN3DU0F0432109,2015 Toyota Prius,4,4,2026-04-22,95300,scheduled,Hybrid battery health check and annual inspection,
+5,3,WBA8E9G59JNU76543,2018 BMW 330i,5,2,2026-04-24,52175,complete,Replace spark plugs and cabin air filter,Spark plugs; cabin air filter
